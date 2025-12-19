@@ -203,10 +203,7 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
-
-
 - **LinkedIn**:(https://www.linkedin.com/in/dilli-babu-317381306)
-dilli-babu-317381306
-
 
 Thank you , and I look forward to connecting with you!
+
