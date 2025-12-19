@@ -79,15 +79,14 @@ WHERE sale_date = '2022-11-05';
 
 2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022**:
 ```sql
-SELECT 
-  *
-FROM retail_sales
-WHERE 
-    category = 'Clothing'
-    AND 
-    TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
-    AND
-    quantity >= 4
+select  * from retail_sales
+where category ='clothing'
+and 
+year(sale_date) = 2022
+and 
+month(sale_date) = 11
+and 
+quantity >= 4
 ```
 
 3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
@@ -103,7 +102,7 @@ GROUP BY category
 4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
 ```sql
 SELECT
-     (AVG(age) as avg_age
+    (AVG(age)) as avg_age
 FROM retail_sales
 WHERE category = 'Beauty'
 ```
@@ -125,9 +124,7 @@ GROUP
     BY 
     category,
     gender
-ORDER BY
-    category,
-    gender
+ORDER BY category
 ```
 
 7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
@@ -148,6 +145,7 @@ where rank = 1;
 
 8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
 ```sql
+
 select top 5
      customer_id,
      sum(total_sale) as total_sales
@@ -158,16 +156,16 @@ order by total_sales desc ;
 
 9. **Write a SQL query to find the number of unique customers who purchased items from each category.**:
 ```sql
-SELECT 
-    category,    
-    COUNT(DISTINCT customer_id) as cnt_unique_cs
-FROM retail_sales
-GROUP BY category
+select 
+      category,
+      count(distinct customer_id) as unique_customer
+from retail_sales
+group by category
 ```
 
 10. **Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)**:
 ```sql
-;with hourly_sale
+ ;with hourly_sale
 as(
 select *,
      case
@@ -181,7 +179,7 @@ select
       shift,
       count(*) as total_sales
 from hourly_sale
-group by shift
+group by shift;
 ```
 
 ## Findings
@@ -201,18 +199,14 @@ group by shift
 
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
 
-
-## Author -Dillibabu 
+## Author - Dillibabu
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
-### Stay Updated and Join the Community
 
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
 
-- **LinkedIn**: www.linkedin.com/in/dilli-babu-317381306
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/dilli-babu-317381306)
+dilli-babu-317381306
 
-- **Mail**: dillibabu6235@gmail.com
 
 Thank you , and I look forward to connecting with you!
-
