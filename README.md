@@ -205,7 +205,7 @@ This project is part of my portfolio, showcasing the SQL skills essential for da
 
 
 
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/dilli-babu-317381306)
+- **LinkedIn**:(https://www.linkedin.com/in/dilli-babu-317381306)
 dilli-babu-317381306
 
 
